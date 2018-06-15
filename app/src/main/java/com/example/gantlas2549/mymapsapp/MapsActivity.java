@@ -39,9 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationManager locationManager;
     private boolean isGPSEnabled = false;
     private boolean isNetworkEnabled = false;
-    private boolean canGetLocation = false;
     private boolean gotMyLocationOneTime;
-    private double latitude, longitude;
     private boolean notTrackingMyLocation = true;
 
 
