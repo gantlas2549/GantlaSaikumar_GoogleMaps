@@ -264,7 +264,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onLocationChanged(Location location) {
             dropAMarker(LocationManager.NETWORK_PROVIDER);
 
-            //Check if doing one time, if so remove updates to both gps and network
             if (gotMyLocationOneTime == false) {
                 locationManager.removeUpdates(this);
                 locationManager.removeUpdates(locationListenerGPS);
@@ -298,7 +297,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         public void onLocationChanged(Location location) {
             dropAMarker(LocationManager.GPS_PROVIDER);
-            //if doing one time remove updates to both gps and network
             if(gotMyLocationOneTime == false){
                 locationManager.removeUpdates(this);
                 locationManager.removeUpdates(locationListenerNetwork);
